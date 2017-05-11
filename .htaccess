@@ -1,0 +1,22 @@
+# Turn Rewrite engine on
+RewriteEngine on
+
+# Rewrite for all .php files
+RewriteCond %[REQUEST_FILENAME} !-f
+RewriteRule ^([^\.]+)$ $1.php [NC,L]
+
+# NC makes the rule non case sensitive
+# L makes this the last rule that this specific condition will match
+
+# For user page
+RewriteRule ^u/([0-9a-zA-Z]+) user.php?user=$1 [NC,L]
+
+# For artist page
+RewriteRule ^artist/([0-9a-zA-Z_]+) artist.php?artist=$1 [NC,L]
+
+
+      # HTML5 MODE
+RewriteEngine On RewriteBase / 
+RewriteCond %{REQUEST_FILENAME} !-f 
+RewriteCond %{REQUEST_FILENAME} !-d 
+RewriteRule ^(.*) /index.php/$1
