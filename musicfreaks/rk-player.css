@@ -1,0 +1,104 @@
+/* Zoom problem*/
+div.wrap{height:100%; overflow:hidden;}
+body,html{height:100%;}
+body{overflow:hidden;}
+* { padding:0px; margin:0px; }
+body { background-position: center center; background-attachment: fixed; background-repeat: no-repeat; background-size: cover; background-color: #464646; height:auto; }
+.mainContainer > .twoColumn { width:100%; max-height:100%; }
+.col-1 { width: 6%; height: 100%;}
+.toolsPane { background-color: #000; position: absolute; opacity:0.8; height:100%;}
+
+.playlist { background: url(images/playlist1.png) no-repeat; background-size:95%; }
+.playAudio { background:url(assets/images/gz_music-player-icons2.png) no-repeat 7px 4px;}
+.pauseAudio { background:url(assets/images/gz_music-player-icons2.png) no-repeat -22px 4px;}
+.previous { background:url(assets/images/gz_music-player-icons2.png) no-repeat -49px 4px;}
+.next { background:url(assets/images/gz_music-player-icons2.png) no-repeat -75px 4px;}
+.replay { background:url(assets/images/gz_music-player-icons2.png) no-repeat -2px -26px; opacity:.8; -webkit-transition:opacity 300ms; transition:opacity 300ms;}
+.replay:hover{opacity:1;}
+.addfav-song{background:url(assets/images/gz_music-player-icons2.png) no-repeat -139px -27px}
+ 
+.playlistContainer { position: relative; bottom:0; height:155px; background-color: black; opacity:0.9; margin-left:6%; }
+.playlistContainer li a { font-size:0px; line-height:0px; color:transparent;} .playlistContainer ul{margin-left:10px; margin-right:10px;}
+.playlistContainer li { display:inline-block; padding:7px; margin-top:7px; padding-left:10px; } .playlistContainer li p{font-family:'Segoe UI', Tahoma, sans-serif; font-weight:100; font-size:12px; color:#CCC; cursor:pointer; text-shadow:rgba(0, 0, 0, 0.498039) 0px -1px; letter-spacing:.5px;}
+.playlistContainer li img { width:100px; height:100px; border:1px solid transparent; border-radius:2%; -webkit-filter:brightness(60%); -moz-filter:brightness(60%); -ms-filter:brightness(60%); -o-filter:brightness(60%);}
+.playlistContainer li img:hover{  -webkit-filter:brightness(75%); -moz-filter:brightness(75%); -ms-filter:brightness(75%); -o-filter:brightness(75%); } .playlistContainer li.activeAudio img{-webkit-filter:brightness(100%); -moz-filter:brightness(100%); -ms-filter:brightness(100%); -o-filter:brightness(100%); border:1px solid #0ecedb;} .playlistContainer li.activeAudio p{color:#0ecedb; font-weight:700;}
+
+.titleContainer {font-size: 13px; width: 100px;}
+.titleContainer p { color: #111; font-family:'Segoe UI', Tahoma, sans-serif; }
+
+.progress { clear:both; height:2px; background-color:#ccc; width:50%; cursor:pointer; position:absolute; }
+.progress .updateProgress { width:0px; background-color:#111; height:100%; float:left; position:relative; }
+.seekableTrack { width: 0%; background-color:#ccc; position:absolute; height:2px; z-index:0; display: block; }
+.seekableTrack, .progress .updateProgress { border:0px inset #ccc;  -webkit-transition: width 0.6s ease; -moz-transition: width 0.6s ease; -o-transition: width 0.6s ease; transition: width 0.6s ease; }
+a {text-decoration:none;}
+
+/* -------
+
+.animated { 
+    -webkit-animation-duration: 1s; 
+    animation-duration: 1s; 
+    -webkit-animation-fill-mode: both; 
+    animation-fill-mode: both; 
+    animation-iteration-count:1; 
+    -webkit-animation-iteration-count:1; 
+} 
+
+@-webkit-keyframes pulse {  
+    50% { -webkit-transform: scale(0.9); } 
+    100% { -webkit-transform: scale(1); } 
+} 
+@keyframes pulse { 
+    
+    50% { transform: scale(0.9); } 
+    100% { transform: scale(1); } 
+} 
+.pulse { 
+    -webkit-animation-name: pulse; 
+    animation-name: pulse; 
+} ------ */ 
+/* ------------ Volume Control ------ */ 
+.volumeControlContainer { position: absolute; bottom:14px; right:11%;}
+.volumeContainer-parent{position:absolute; bottom: 40px; right:85px; width: 145px; height: 30px; background-color:#f2f2f2; border:1px solid rgba(0,0,0,.15); display:none; -webkit-box-shadow:0px 1px 8px rgba(0,0,0,.2); box-shadow:0px 1px 8px rgba(0,0,0,.2);}
+.volumeSlider {
+	cursor:pointer;
+    width: 118px;
+    height: 2px;
+	background-color:#ccc;
+   
+    
+}
+
+.volume {
+    content:"";
+	cursor:pointer;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    right: -30px;
+    background:url(assets/images/gz_music-player-icons2.png) no-repeat -34px -27px;
+} .liste-msg{ background-color:rgba(20,20,20,.8); width:174px; height:45px; font-family:'Segoe UI', Arial, sans-serif; color:#C7C7C7; border-bottom-right-radius:10px; border-top-right-radius:10px; border-bottom-left-radius:10px;} .liste-msg h4{font-weight:100; margin-left:5px; margin-top:9px;}
+
+.volumeSlider .ui-slider-handle {
+    position: absolute;
+    z-index: 2;
+    width: 8px;
+    height:8px;
+    cursor: pointer;
+	background-color:#111;
+	border-radius:50%;
+    font-weight: bold;
+    color: #1C94C4;
+    outline: none;
+    top: -3px;
+    margin-left: -4px;
+
+}
+
+.volumeSlider .ui-slider-range {
+    background-color: #111;
+    position: absolute;
+    height: 100%;
+    border-radius: 0px;
+}
+	
+

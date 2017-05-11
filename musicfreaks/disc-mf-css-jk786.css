@@ -1,0 +1,21 @@
+@charset "utf-8";
+/* CSS Document */
+.shad{box-shadow: 0 1px 2px 0px rgba(0,0,0,.1); -moz-box-sizing: 0 1px 2px 0px rgba(0,0,0,.1); -ms-box-sizing: 0 1px 2px 0px rgba(0,0,0,.1);}
+#discover-page{position:relative; height:100%;}
+
+.discover{padding:30px 20px 20px 20px; text-align:center; background-color:#fff; margin:10px 1% 0 1%;}
+h1#discover-headline{ font-family:'Raleway' !important; font-weight:500; font-size:21px; color:#777;}
+.d-horizontal_line{ padding:5px 100px; margin:8px 190px 0 190px; border-top:1px solid rgba(221,220,220,0.6);}
+.d-horizontal_line2{ padding:5px 100px; margin:22px 190px 0 190px; border-top:1px solid rgba(221,220,220,0.6);}
+.discover ul{padding:0;}
+.discover li{ display:inline-block; margin:12px 10px 0 10px; width:260px; height:150px; position:relative;}
+.d-img{width:260px; height:150px; background-color:#4c5462; border-radius:10px;}
+.d-img img{ width:260px; height:150px; object-fit:cover; background-color:#4c5462; border-radius:10px; z-index:1; -webkit-filter: grayscale(100%); filter: grayscale(100%);}
+.d-overlay{position:absolute; width:260px; height:150px; background: #283048; background: -webkit-linear-gradient(to left, rgba(40,48,72,.6), #283048); background: linear-gradient(to left, rgba(40,48,72,.5),rgba(40,48,72,.9));  top:0; border-radius:10px; font-size:20px; color:#fff; font-family:'Raleway' !important; font-weight:500; text-transform:uppercase; line-height:1.1em; text-align:center; transition:all 450ms;}
+.d-overlay:hover{background-color:rgba(0,0,0,1);}
+.d-overlay span{ position:absolute; top:41%; right:0; left:0; width:100%; text-align:center; text-shadow:0 1px 1px  rgba(0,0,0,.8);}
+.hr{  width:50px; padding:0 40px;}
+.d-icon{display:block; margin-top:20px;}
+.d-icon:before{content:'\e9c9'; font-family: 'IcoMoon-Free'; font-weight: normal; font-style: normal; font-size:25px;}
+
+#img-stations{ background:url(images/ac_4511.jpg);}

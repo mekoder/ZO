@@ -1,0 +1,16 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*feedback page content*/
+.shad{box-shadow: 0 1px 2px 0px rgba(0,0,0,.1); -moz-box-sizing: 0 1px 2px 0px rgba(0,0,0,.1); -ms-box-sizing: 0 1px 2px 0px rgba(0,0,0,.1);}
+#feedback-page{position:relative; height:100%;}
+.feedb_c45{width:100%; height:336px; background:url(images/feedb_c45.jpg) no-repeat 0 90%; background-size:100%; background-color:#5d93fe;}
+.feedbshadow_45 { left:0; right:0; top:0; position:absolute; opacity:.6; height: 336px; /*background: linear-gradient(90deg,#1c81a5 16.66%,#00a7db 16.66%,#00a7db 33.32%,#9ac430 33.32%,#9ac430 49.98%,#feb806 49.98%,#feb806 66.64%,#fe2872 66.64%,#fe2872 83.3%,#ff41be 83.3%); background-image: -webkit-linear-gradient(-360deg, #1c81a5 16.66%,#00a7db 16.66%,#00a7db 33.32%,#9ac430 33.32%,#9ac430 49.98%,#feb806 49.98%,#feb806 66.64%,#fe2872 66.64%,#fe2872 83.3%,#ff41be 83.3%); */ background:linear-gradient(140deg, #c013df 1%, #0ecedb 51%, #0f53ce 90%);}
+.text_feedb45{ position:absolute; font-size:55px; color:#fff; font-family: 'Raleway' !important; font-style: normal; font-weight: 300; top:12%; left:2%; width:95%;} .text_feedb45 h2{font-size:80px; font-family:"Open Sans", "Lucida Grande", "Helvetica Neue", Helvetica, Arial, Sans-serif; font-weight:600; line-height:1em;} .text_feedb45 p{ line-height:.935em;}
+.feedb_smilys{ position:relative; padding:25px 100px; text-align:center; background-color:#fff; margin:10px 0 0 0; transition: box-shadow 380ms;}
+.body-container .feedb_smilys.fix-it{position:fixed; padding:25px 0 25px 76px; width:100%; left:0; margin:0 auto; top:40px; z-index:100; box-shadow: 0 1px 7px rgba(0,0,0,0.3);}
+.smilys-container{margin:0 auto;} .smilys-container span{font-family:"Open Sans", "Lucida Grande", "Helvetica Neue", Helvetica, Arial, Sans-serif; font-size:13px; text-align:center; margin:85px auto; background-color:#888; padding:1px 1px 2px 1px; border-radius:4px; display:block; color:#fff;}
+#e_45 font{font-size:14px;} #e_45{ margin:0 auto; font-family:"Open Sans", "Lucida Grande", "Helvetica Neue", Helvetica, Arial, Sans-serif; color:#959595; font-size:13px; letter-spacing:.01em;}
+.feedb_smilys a{display:inline-block; width:85px; height:85px; margin-left:5px; opacity:.7; transition:all 400ms; -webkit-transition:all 400ms; -ms-transition:all 400ms; -moz-transition:all 400ms;} .feedb_smilys a:hover{opacity:1;} .smily_1{background:url(images/expe1.png) no-repeat; background-size:100%;} .smily_2{background:url(images/expe2.png) no-repeat; background-size:100%;} .smily_3{background:url(images/expe3.png) no-repeat; background-size:100%;} .smily_4{background:url(images/expe4.png) no-repeat; background-size:100%;} .smily_5{background:url(images/expe5.png) no-repeat; background-size:100%;}
+.feedb-content{width:100%; height:500px; background-color:#fff; margin:10px 0 0 0;}
+/*feedback page ends*/

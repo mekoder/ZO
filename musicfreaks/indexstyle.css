@@ -1,0 +1,40 @@
+@charset "utf-8";
+/* CSS Document */
+body{margin:0; background:url(images/index-images/index_bg.png) repeat;}
+.index-container{position:relative;}
+#nav_scroll.active{ background-color:rgba(10,10,10,.65);}
+.ind_nav45{position:fixed; top:0; width:100%; height:51px; background-color:rgba(20,20,20,1); z-index:1000; transition:all 900ms;} 
+.display-a1{margin-top:51px;}
+.msg_45{width:33%; height:616px; background-color:#FF4169; float:left;}  .msg_45 strong{color:#232323;} 
+.msg_45 ul{padding:0; margin:30px 0 0 30px;}
+.msg_45 li{ display:block;  margin-top:10px; width:400px; word-spacing:normal; font-family:'Lato', sans-serif; font-size:20px; color:#fff; font-weight:100;}
+.display_imgs{ width:67%; height:616px; background-color:#0C9; float:right;}
+.icol_11{ margin:0; width:50%; height:100%; background-color:#0066FF; float:left;}
+.icol_12{width:50%; height:100%; background-color:#F33; float:right;}
+.subcol_11{width:457.5; height:70%; background-color:#7c26f8 ;}
+.subcol_12{width:100%; height:30%; background-color:#3399CC;}
+.subcol_21{width:100%; height:30%; background-color:#3399CC;}
+.subcol_22{width:100%; height:70%; background-color:#0C6;}
+.subcol1_img1{width:50%; height:100%; float:left; background-color:#666666; background:url(images/Index-images/bahutamil.jpg) no-repeat;}
+.subcol1_img2{width:50%; height:100%; float:right; background-color:#888; background:url(images/Index-images/kadalitelugu.jpg) no-repeat;}
+.subcol2_img1{width:50%; height:100%; float:left; background-color:#666666; background:url(images/Index-images/5tara.jpg) no-repeat;}
+.subcol2_img2{width:50%; height:100%; float:right; background-color:#888; background:url(images/Index-images/bohemiasalute.jpg) no-repeat;}
+.msg_45 h1{color:#fff; padding:1px 0 7px 13px; width:297px; background-color:#222; font-weight:bolder; font-size:55px; font-family: 'Lato', sans-serif; margin:53px 0 0 28px;}
+.msg_45 h2{color:#222; padding:0 0 2px 13px; width:90px; background-color:#fff; font-weight:bolder; font-size:55px; font-family: 'Lato', sans-serif; margin:0 0 0 28px;}
+.signupin-btn span{margin:0 0 0 31px; font-family:'Lato', sans-serif;}
+.signupin-btn{background:#3a5897; background-image:url(images/fb_main.png); background-position:21px 23px; background-repeat:no-repeat; letter-spacing:1px; width:138px; height:64px; color:#FFF; cursor:pointer; font-size:16px; border:none; outline:none; margin:18px 0 0 307px;}
+.signupin-btn:hover{background:#294b92; background-image:url(images/fb_main.png); background-position:21px 23px; background-repeat:no-repeat;}
+.explorein-btn span{margin:0 0 0 30px; font-family:'Lato', sans-serif;}
+.explorein-btn{background:#045ce1; background-image:url(images/explore12.png); background-position:36px 22px; background-repeat:no-repeat; letter-spacing:1px; width:180px; height:67px; color:#FFF; border:none; margin-top:0px; font-size:16px; cursor:pointer; outline:none; margin:0 0 0 265px;}
+.explorein-btn:hover{background:#0452c8; background-image:url(images/explore12.png); background-position:36px 22px; background-repeat:no-repeat;}
+.down_div{ margin:12px 0 0 55px; width:52px; height:32px; background:url(images/Index-images/down_div.png) no-repeat 5px 5px; background-size:94%;  -webkit-animation: bounce 2s infinite ease-in-out; cursor:pointer;}
+
+@-webkit-keyframes bounce {
+	0%, 20%, 60%, 100%  { -webkit-transform: translateY(0); }
+    40%  { -webkit-transform: translateY(-12px); }
+	80% { -webkit-transform: translateY(-6px); }
+}
+
+.display-a2{width:100%; height:642px; background-color:#0066FF; clear:both;}
+
+

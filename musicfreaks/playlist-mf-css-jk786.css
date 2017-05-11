@@ -1,0 +1,89 @@
+@charset "utf-8";
+
+@font-face{ font-family: 'IcoMoon-Free'; src: url('js/IcoMoon-Free.ttf') format('truetype'); font-weight: normal; font-style: normal; }
+@font-face{ font-family: dashicons; src:url(js/dashicons.otf); font-weight: normal; font-style: normal; }
+.shad{box-shadow: 0 1px 2px 0px rgba(0,0,0,.1); -moz-box-sizing: 0 1px 2px 0px rgba(0,0,0,.1); -ms-box-sizing: 0 1px 2px 0px rgba(0,0,0,.1);}
+#albums-page{position:relative;}
+.playlist-bg{position:relative; z-index:4; overflow:hidden; background-color:rgba(0,0,0,.3); height:250px; }
+.playlist-blur-bg{height:250px; position:absolute; top:0; right:0; left:0; -webkit-filter: blur(50px); -ms-filter: blur(50px); filter: blur(50px);}
+.playlist-overlay{position:absolute; z-index:5; top:0; left:0; right:0; background:rgba(0,0,0,.6); /*background:linear-gradient(to bottom,transparent -25%,#000 100%);*/ padding:0 45px; text-align:left; height:250px;}
+.playlist-art{ margin:47px 0 0 65px; display:inline-block;}
+.playlist-art .playlist-art-img{width:180px; height:180px; border-radius:10px; object-fit:cover; box-shadow:0px 0px 21px rgba(0,0,0,0.4);}
+.playlist-info{ display:inline-block; position:absolute; top:106px; color:#fff; font-family:'Raleway' !important; margin-top:8px; margin-left:20px;}
+h1.playlist-title{ font-weight:500; font-size:30px;}
+p.playlist-subtitle{font-size:13px; font-weight:normal; margin:2px 0 0 2px; line-height:1.4em; color:#ddd;}
+p.playlist-subtitle a{color:#fff;} 
+p.playlist-subtitle a:hover{color:#ddd;}
+p.playlist-trackinfo{font-size:14px; font-weight:lighter; margin:3px 0 0 0; line-height:1.6em; color:#ddd;}
+p.playlist-copyright{font-size:13px; font-weight:lighter; line-height:1.1em; color:#ddd;} 
+.action-buttons, .action-buttons2{padding:0; position:absolute; top:175px; margin-left:20px; display:inline-block;}
+.action-buttons button , .action-buttons2 button{display:inline-block; margin-right:2px;}
+.func-btns{display:inline-block;}
+.back-btns-bg{height:57px; width:100%; object-fit:cover; margin:-1px; padding:-1px; visibility:hidden;}
+.back-btns-overlay{position:absolute; padding:10px 0; text-align:center; z-index:1; left:0; right:0; top:0;}
+.back-btns-overlay button{display:inline-block;}
+.pl-btn{width:26px; height:26px; position:relative; border:/*1px solid #fff*/none; border-radius:40px; outline:none; background:transparent; color:#fff; font-size:12px; text-transform:uppercase; font-family:"Segoe UI",Arial,sans-serif; cursor:pointer; padding:0 0 1px 0; top:6px; left:8px;} 
+.pl-btn:hover, .pl-btn2:hover{ opacity:1;}
+.pl-btn2{width:100px; padding: 7px 0; border:1px solid #fff; background:transparent; text-transform:capitalize; font-weight:400; margin:0 1px; font-size:14px; border-radius:40px; outline:none; color:#fff; font-size:12px; font-family:"Segoe UI",Arial,sans-serif; cursor:pointer;}
+.playall-btn{width: 86px; height: 35px; background-color: #3d72d9; border: none; border-radius: 3px; color: #fff; font-size: 13px; font-weight: 600; cursor: pointer; outline: none; box-shadow: 0 2px 5px 0px rgba(0,0,0,.26); margin-right: 3px; font-family: 'Raleway' !important; text-transform: uppercase;}
+.edit-playlist-btn{width: 83px; height: 35px; background-color: #eee; border: none; border-radius: 3px; font-size: 13px; font-weight: 700; cursor: pointer; color: #555; outline: none; box-shadow: 0 2px 5px 0px rgba(0,0,0,.2); font-family: 'Raleway' !important; text-transform: uppercase;}
+.playlist-body{padding:0 0 20px 0; margin:0 2%; background-color:#fff;}
+.trackinfo-bar{background-color:#fff; font-family:'Raleway' !important; color:#000; font-weight:700; font-size:14px; text-transform:uppercase; margin-top:10px; border-left:3px solid #000;}
+.trackinfo-bar ul{width:100%; padding:0;}
+.trackinfo-bar li, .track li, .track2 li{display:inline-block; padding:22px 0; height:12px; text-align:left; overflow:hidden; }
+li.column-1{ width:5%; text-align:center;}
+li.column-2{width:32%;}
+li.column-3{width:22%;}
+li.column-4{width:31%;}
+li.column-5{text-align:center;}
+/*
+.icon{font-family: 'IcoMoon-Free'; font-weight:normal; font-style: normal; font-size:13px; }
+.icon2{font-family: dashicons; font-weight:normal; font-style: normal; font-size:17px;}
+*/
+.track, .track2{font-family:'Raleway' !important; color:#666; font-weight:500; font-size:14px; background-color:#f8f8f8; font-weight:600;}
+.track2{background-color:#fff;}
+.track:hover, .track2:hover{background-color:#f1f1f1;}
+.track ul, .track2 ul{padding:0; border-left:3px solid #aaa;}
+
+/* More Options */
+.moreOptions-content { z-index:2; display: none; position: absolute; background-color: #fff; overflow: auto; box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); top:32px; right:-155px; font-family:'Raleway' !important; text-align:left; padding:5px 0; border-radius:1px; border:1px solid #eee;}
+.moreOptions-content a { color:#333; padding:13px 109px 13px 25px; text-decoration: none; display: block; overflow:hidden; white-space:nowrap; cursor:pointer;}
+.display{display:block; -webkit-animation: more-slide-up 0.3s; animation: more-slide-up 0.3s;}
+/* --SLIDE-UP-- .moreOptions-content.mslideUp{-webkit-animation: more-slide-up 0.3s; animation: more-slide-up 0.3s;}*/
+.moreOptions-content a:hover {background-color: rgba(51,51,51,.08);}
+.moreOptions-content span{font-size:15px; font-weight:600;}
+.moreOptions-content i{font-size:14px; display:inline-block; position:relative; top:2px;}
+.gz-icons{background-image:url(assets/images/gzv_icons2white11.png); background-repeat:no-repeat;}
+.gz-icons:active{opacity:.8;}
+
+.add-fav-btn{ background-position:1px -22px;}
+.share-btn{background-position:-52px -22px;} 
+.copylink-btn{background-position:-80px -22px;}
+.lock-btn{background-position:-166px -22px;}
+.delete-btn{background-position:-189px -22px;}
+.downloadpl-btn{background-position:-80px -46px;}
+.moreopt-btn{background-position:-112px -22px; margin-left:3px;}
+.report-icon:before{content: "\f227";}
+.share-icon:before{content: "\f237";}
+
+
+
+@-webkit-keyframes more-slide-up {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(30px);
+            transform: translateY(30px); }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0); } }
+@keyframes more-slide-up {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(30px);
+            transform: translateY(30px); }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0); } }
+/* More Options ends */

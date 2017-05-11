@@ -1,0 +1,31 @@
+@charset "utf-8";
+/* CSS Document */
+@font-face {
+    font-family: 'IcoMoon-Free';
+    src: url('IcoMoon-Free.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal; 
+}
+.shad{box-shadow: 0 1px 2px 0px rgba(0,0,0,.1); -moz-box-sizing: 0 1px 2px 0px rgba(0,0,0,.1); -ms-box-sizing: 0 1px 2px 0px rgba(0,0,0,.1);}
+#videos-page{position:relative; height:100%;}
+.custom-menu {padding:5px 0; display:none; z-index: 1000; list-style:none; position: absolute; overflow:hidden; background-color:rgba(20,20,20,.9); white-space: nowrap; font-family: sans-serif; color: #ddd; border-radius: 5px;}
+.vicon{font-family: 'IcoMoon-Free';  font-weight: normal; font-style: normal; font-size:15px; padding-right:5px;}
+.ishare:before{content:'\e968';}
+.icopylink:before{content:'\e925';}
+.ifavorite:before{content:'\e9da';}
+.custom-menu li {padding: 10px 90px 8px 15px; cursor: pointer;}
+.custom-menu li:hover{ background-color:rgba(65,65,65,.8);}
+.parnt_vidcont-jk{margin:0;}
+.vid_content-jk{width:auto; height:auto; position:relative;}
+.viddis_sect{width:100%; height:480px; background:#000;}
+.vidab{width:95%; height:160px; background:#fff;  margin-top:10px; margin-left:2.5%; }
+.vid-title{width:auto; height:auto;}
+.ab-content{padding:12px 20px 12px 20px;}
+.vid_nam{position:absolute; width:815px; height:auto; font-family:"Open Sans", "Lucida Grande", "Helvetica Neue", Helvetica, Arial, Sans-serif; font-size:27px; color:#444;}
+.video-play{margin-left:170px; }
+.vidcmt{width:770px; height:490px; background:#FFFFFF; margin:10px 0 0 30px; float:left;}
+.vid_rytcont{ width:auto; height:auto;}
+.on_trend-sec{width:355px; height:280px; background:#FFF; float:right; margin:10px 30px 0 0;}
+.on_trend-sec span{position:absolute; color:#b5b5b5; font-size:13px; font-weight: normal; font-family:helvetica, arial, sans-serif; margin:12px 0 0 12px;}
+.suggested_vids{width:355px; height:600px; background:#FFF; margin:10px 30px 0 0; float:right;}
+

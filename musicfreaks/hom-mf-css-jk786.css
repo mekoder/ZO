@@ -1,0 +1,13 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*home right contents*/
+.shad{box-shadow: 0 1px 2px 0px rgba(0,0,0,.1); -moz-box-sizing: 0 1px 2px 0px rgba(0,0,0,.1); -ms-box-sizing: 0 1px 2px 0px rgba(0,0,0,.1);}
+#home-page{position:relative; height:100%;}
+.vsugg-h{width:97%; height:230px; background:#fff; margin:15px 1.5%;}
+.inline-div-content{padding:0; text-align:center;}
+.inline-div-content .home-box-left-jk, .inline-div-content .home-box-middle-jk2, .inline-div-content .allright-box { display:inline-block; margin:10px 0 0 10px;}
+.allright-box{}
+.home-box-right-jk {width:224px; height:275px; background-color:#fff;} .home-box-right-jk2 { overflow:auto;width:224px; height:567px; background-color:#fff; margin-top:10px;}
+
+.home-box-left-jk {width:224px; height:853px; background-color:#fff; } .home-box-middle-jk2 {width:700px; height:853px; background-color:#fff;}

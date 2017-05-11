@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style type="text/css">
+div#video_player_box{ width:750px; background:#000; margin:30px 300px;}
+#fullscreenbtn{width:auto; font-size:18px; height:22px; padding-bottom:20px; background:transparent; border:none; color:#FFF; border-radius:1PX; outline:none;  }#fullscreenbtn:hover{color:#333;}
+#playpausebtn{width:55px; height:28px; background:transparent; border:none; color:#FFF; border-radius:25px; outline:none; font-weight:bold;} #playpausebtn:active{color:#333;}
+#mutebtn{width:65px; height:28px; background:transparent; border:none; color:#FFF; border-radius:25px; outline:none; font-weight:bold;} #mutebtn:active{color:#333;}
+div#video_controls_bar{ background: #0ecedb; padding:12px 11px; color:#333; font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;}
+input#volumeslider{ width: 80px; padding-top:2px;}
+input#seekslider{ width:355px; padding-top:2px }
+input#volumeslider{ width: 80px;}
+input[type='range'] {-webkit-appearance: none !important; -ms-appearance: none !important; background: #FFF; height:4px; outline:none; border-radius:10px;} input[type='range']::-webkit-slider-thumb {
+    -webkit-appearance: none !important;
+	-ms-appearance: none !important;
+	margin-bottom:2px;
+    background: #FFF;
+    height:16px;
+	box-shadow: 0px 0px 3px rgba(34, 25, 25, 0.4); 
+    width:16px;
+	border-radius:100%;
+	cursor:pointer;
+}
+</style>
+<script>
+var vid, playbtn, seekslider, curtimetext, durtimetext, mutebtn, volumeslider, fullscreenbtn;
+function intializePlayer(){
+	// Set object references
+	vid = document.getElementById("my_video");
+	playbtn = document.getElementById("playpausebtn");
+	seekslider = document.getElementById("seekslider");
+	curtimetext = document.getElementById("curtimetext");
+	durtimetext = document.getElementById("durtimetext");
+	mutebtn = document.getElementById("mutebtn");
+	volumeslider = document.getElementById("volumeslider");
+	fullscreenbtn = document.getElementById("fullscreenbtn");
+	// Add event listeners
+	playbtn.addEventListener("click",playPause,false);
+	seekslider.addEventListener("change",vidSeek,false);
+	vid.addEventListener("timeupdate",seektimeupdate,false);
+	mutebtn.addEventListener("click",vidmute,false);
+	volumeslider.addEventListener("change",setvolume,false);
+	fullscreenbtn.addEventListener("click",toggleFullScreen,false);
+}
+window.onload = intializePlayer;
+function playPause(){
+	if(vid.paused){
+		vid.play();
+		playbtn.innerHTML = "Pause";
+	} else {
+		vid.pause();
+		playbtn.innerHTML = "Play";
+	}
+}
+function vidSeek(){
+	var seekto = vid.duration * (seekslider.value / 100);
+	vid.currentTime = seekto;
+}
+function seektimeupdate(){
+	var nt = vid.currentTime * (100 / vid.duration);
+	seekslider.value = nt;
+	var curmins = Math.floor(vid.currentTime / 60);
+	var cursecs = Math.floor(vid.currentTime - curmins * 60);
+	var durmins = Math.floor(vid.duration / 60);
+	var dursecs = Math.floor(vid.duration - durmins * 60);
+	if(cursecs < 10){ cursecs = "0"+cursecs; }
+	if(dursecs < 10){ dursecs = "0"+dursecs; }
+	if(curmins < 10){ curmins = "0"+curmins; }
+	if(durmins < 10){ durmins = "0"+durmins; }
+	curtimetext.innerHTML = curmins+":"+cursecs;
+	durtimetext.innerHTML = durmins+":"+dursecs;
+}
+function vidmute(){
+	if(vid.muted){
+		vid.muted = false;
+		mutebtn.innerHTML = "Mute";
+	} else {
+		vid.muted = true;
+		mutebtn.innerHTML = "Unmute";
+	}
+}
+function setvolume(){
+	vid.volume = volumeslider.value / 100;
+}
+function toggleFullScreen(){
+	if(vid.requestFullScreen){
+		vid.requestFullScreen();
+	} else if(vid.webkitRequestFullScreen){
+		vid.webkitRequestFullScreen();
+	} else if(vid.mozRequestFullScreen){
+		vid.mozRequestFullScreen();
+	}
+}
+</script>
+</head>
+<body>
+<div id="video_player_box">
+  <video id="my_video" width="750" height="410" allowfullscreen>
+    <source src="audios/[001932].mp4">
+  </video>
+  <div id="video_controls_bar">
+    <button id="playpausebtn" title="Play/Pause">Play</button>
+    <input id="seekslider" type="range" min="0" max="100" value="0" step="1">
+    <span id="curtimetext">00:00</span> / <span id="durtimetext">00:00</span>
+    <button id="mutebtn" title="Mute/Unmute">Mute</button>
+    <input id="volumeslider" type="range" min="0" max="100" value="100" step="1">
+    <button id="fullscreenbtn" title="Full Screen Mode">&nbsp;[&nbsp;&nbsp;]&nbsp;</button>
+  </div>
+</div>
+</body>
+</html>

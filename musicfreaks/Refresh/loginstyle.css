@@ -1,0 +1,170 @@
+p a {
+  position: relative;
+  color: #b1b1b1;
+  text-decoration: none;
+}
+
+p a:hover {
+  color: #333;
+}
+p a:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: #333;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.2s ease-in-out 0s;
+}
+p a:hover:before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+		 a:active, a:focus { 
+ outline: none; 
+ ie-dummy: expression(this.hideFocus=true);
+}
+
+p a:active, p a:focus { 
+ outline: thin;
+ border: 1px solid #00FFFF; 
+ ie-dummy: expression(this.hideFocus=true);
+}
+	
+	
+form#form1 {
+	padding-top:0px;
+	padding-bottom:0px;
+	padding-left: 0px;
+	}
+.formsize1 {
+padding-top:0px;
+padding-bottom:0px;
+margin-left:0%;
+padding-right:0%;
+left:0;
+top:10%;
+text-align:center;
+	
+	}
+		
+
+.regisform {
+	padding-bottom:0%;
+	padding-top:0px;
+	padding-left:0%;
+	padding-right:0%;
+	}
+	.regisform input[type="password"]{
+		color:#0ecedb;
+	}
+	
+	
+	#log-with-fb-btn:hover{
+	background-color:#2b457d;
+	}
+	#log-with-fb-btn:focus{
+	background-color:#2b457d;
+	}
+	#log-with-fb-btn{
+		color:#FFFFFF;
+		font-size:15px;
+		background-repeat:no-repeat;
+		font-weight:normal;
+		margin-left:4px;
+		margin-top:10px;
+		font-family:Tahoma;
+		background-image:url(images/fb2.png);
+		background-color:#3B5998;
+		width:30%;
+		height:45px;
+		border-radius:25px;
+		border: 0px solid transparent;
+		outline:none;
+		cursor:pointer;
+		}
+	.regisform input[id="lbutton"]{
+	font-size:15px;
+	font-family:Arial, Helvetica, sans-serif;
+	font-style:normal;
+	text-align:center;
+	box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    width: 96%;
+	height:35px;
+    padding:2%;
+	padding-left:10px;
+    background: #868686;
+    border-bottom: 0px solid transparent;
+    border-top-style: none;
+	border-radius:25px;
+    border-right-style: none;
+    border-left-style: none;    
+    color: #fff;
+	cursor:pointer;
+	outline:none; }
+	.regisform input[type="submit"]:hover {
+		background-color:#0ecedb;}
+		.regisform input[type="submit"]:focus {
+		background-color:#0ecedb;}
+	
+	.loginfields {
+	padding-top:0%;
+	padding-bottom:0%;
+	left:60px;
+	right:0%;
+	outline:none;
+	text-align:center;
+	padding-left:0%;	
+		}
+		::-webkit-input-placeholder {
+         color: #d8d8d8;
+	}
+		
+			input#usermail {
+		text-align:center;
+		padding:8px 13px;
+		border:1px solid #d7d7d7;
+		color:#0ecedb;
+		font-family:Arial, Helvetica, sans-serif;
+		font-style:italic;
+		font-size:16px;
+		padding-left:12px;
+		width:90%;
+    	 border-radius:25px;
+		background-color: #FFF;
+		outline:none;
+		box-shadow:inset 0 1px 0.5px 0.5px rgba(0,0,0,.07);
+		}
+	input#pass {
+		text-align:center;
+		padding:8px 13px;
+		border:1px solid #d7d7d7;
+		font-family:Arial, Helvetica, sans-serif;
+		font-style:italic;
+		font-size:16px;
+		padding-left:12px;
+    	border-radius:25px;
+		width:90%;
+		background-color: #FFF;
+		outline:none;
+		box-shadow:inset 0 1px 0.5px 0.5px rgba(0,0,0,.07);
+	}
+	
+	.copyright
+{
+	padding-bottom:0px;
+	padding-top:0px;
+	margin-top: 160px;
+	margin-left: 1160px;
+	margin-bottom:10px;
+	padding-right:0px;
+}
